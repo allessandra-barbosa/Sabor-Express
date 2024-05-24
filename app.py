@@ -1,6 +1,8 @@
 import os
 
-restaurantes = ['Pizza', 'Lanche']
+restaurantes = [{'nome':'Praça', 'categoria':'Japonesa', 'ativo':False},
+                {'nome':'Mutio Suprema', 'categoria':'Italiana', 'ativo':True},
+                {'nome':'Comida Boa', 'categoria':'Brasileira', 'ativo':True}]
 
 def exibir_nome_do_prograna():
     print('𝚂𝚊𝚋𝚘𝚛 𝙴𝚡𝚙𝚛𝚎𝚜𝚜\n')
@@ -39,7 +41,10 @@ def listar_restaurantes():
     exibir_subtitulo('Listando os restaurantes')
 
     for restaurante in restaurantes:
-        print(f'.{restaurante}')
+        nome_restaurante = restaurante['nome']
+        categoria = restaurante['categoria']
+        ativo = restaurante['ativo']
+        print(f'- {nome_restaurante} | {categoria} | {ativo}')
 
     voltar_ao_menu_princial()
 
