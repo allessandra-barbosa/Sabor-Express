@@ -44,12 +44,12 @@ elif 12 < idade < 18:
 else:
     print('Sua categoria é adulto')
 
-"""
+
 
 #------------------------------------------------------
 
 
-print('# Exercicios modulo 02\n')
+print('# Exercicios modulo 03\n')
 
 print('1. Crie uma lista\n')
 lista_de_num = [1,2,3,4,5,6,7,8,9,10]
@@ -105,3 +105,45 @@ except ZeroDivisionError:
     print('A lista está vazia, não é possível calcular a média')
 except Exception as e:
     print(f'Ocorreu um erro:{e}')
+
+"""
+
+
+#------------------------------------------------------
+
+print('# Exercicios modulo 04\n')
+
+pessoa = {'nome': 'Alessandra', 'idade': 23, 'cidade': 'SBC'}
+
+print(f'1. Informações de uma pessoa {pessoa}')
+
+pessoa['idade'] = 24
+
+pessoa['profissao'] = 'Analista'
+
+del pessoa['cidade']
+
+print()
+
+print(f'2. Informações atualizadas {pessoa}')
+print()
+
+numeros_quadrados = {x: x ** 2 for x in range(1, 6)} 
+print(f'3. Números ao quadrado {numeros_quadrados}\n')
+
+print('4. Validação de chave no dicionario')
+if 'nome' in pessoa:
+    print("A chave 'nome' existe no dicionário")
+else:
+    print("A chave 'nome' não existe no dicionário")
+
+print()
+
+print('4. Frequência de cada palavra')
+
+frase = "Python se tornou uma das linguagens de programação mais populares do mundo nos últimos anos."
+contagem_palavras = {}
+palavras = frase.split()
+for palavra in palavras:
+    contagem_palavras[palavra] = contagem_palavras.get(palavra, 0) + 1
+print(contagem_palavras)
